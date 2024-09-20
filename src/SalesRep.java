@@ -16,5 +16,9 @@ public class SalesRep extends Employee {
 		return 0.1*salesMade;
 	}
 	
+	public double getSales(){
+		return this.salesMade;
+	}
+	
 
 }

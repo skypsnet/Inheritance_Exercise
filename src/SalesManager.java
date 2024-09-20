@@ -8,10 +8,19 @@ public class SalesManager extends SalesRep {
 			int vacationDaysTaken, int yearsWorked, double salary, double salesMade) {
 		super(firstName, lastName, registration, age, daysWorked, vacationDaysTaken, yearsWorked, salary, salesMade);
 		// TODO Auto-generated constructor stub
-		
-		
-		
+			
 	}
+	
+	public double calculateComission(){
+	    double ventas = 0;
+			 if(salesTeam.size()!=0)
+			 {
+				for(SalesRep sale: salesTeam.values()) {
+					ventas += sale.getSales();
+				}
+			 }
+		 return 0.03*ventas;
+	   }
 	
 	
 
